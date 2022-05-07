@@ -182,7 +182,7 @@ def pdToTorch(df):
     return torch.from_numpy(np.array(df, dtype=np.float32))
 
 
-labels = np.genfromtxt('/Users/michaelcunningham/desktop/datasets/pm50.csv', delimiter='\t', dtype='str', usecols=1, skip_header=1)
+labels = np.genfromtxt('/Users/exampleuser/desktop/pm50.csv', delimiter='\t', dtype='str', usecols=1, skip_header=1)
 
 
 # Creates an array of labels with the classes encoded as integers
@@ -200,7 +200,7 @@ print()
       
 print("Loading data. This may take a few moments...")
 
-X = pd.read_csv("/Users/michaelcunningham/desktop/datasets/breast.csv", delimiter='\t')
+X = pd.read_csv("/Users/exampleuser/desktop/breast.csv", delimiter='\t')
 
 print("Dataset loaded")
 print()
