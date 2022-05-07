@@ -1,11 +1,14 @@
 # About
-This script was a follow-up on my KNN practice program, using the same breast cancer dataset (for more info on that data, see the readme for knn-practice). For this program, I used a simple multilayer perceptron written in PyTorch. Rather than identifying the optimal number of principal components to use for dimensionality reduction as I did previously, here I train 3 neural networks using either
+This script was a follow-up on my KNN practice program, using the same breast cancer dataset. For this program, I used a simple multilayer perceptron written in PyTorch. Rather than identifying the optimal number of principal components to use for dimensionality reduction as I did previously, here I train 3 neural networks using either
 
 1) only the best 48 genes by ANOVA F-value
 2) only the PAM50 genes used for typing breast cancer (minus 2 which are not found in the dataset)
 4) the top 48 principal components of the data
 
 and compare their performance at correctly classifying the tumors in the dataset. Subsequently, I ensemble all of their predictions and assess the accuracy of the ensemble.
+
+# The data
+For information on the dataset, as well as to access the input data, see my knn-practice repository.
 
 # The algorithm
 The neural network used for each model is a basic multilayer perceptron with one hidden layer, an architecture which I found gave the best results; adding additional layers did not appear to significantly boost performance. Although I did not do extensive and systematic hyperparameter optimization, I tweaked a few elements of the model to correct a persistent problem I experienced with training instability for the ANOVA and PAM50 models.
